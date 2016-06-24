@@ -1,0 +1,418 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ @import
+ */
+
+ /*
+ *= require ionicons
+ */
+
+ ///nice orange #e67e22
+ //aqua #10a690
+ //grey #262626
+
+ @import 'bootstrap';
+
+html {
+    height: 100%;
+    margin: 0;
+}
+body {
+    height: 100%;
+    margin: 0;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), image-url(background);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+} 
+
+nav {
+	margin: 0 auto;
+	// height: 100px;
+	max-width: 30%;
+	padding-left: 5%;
+	span {
+		font-size: 30px;
+		// color: #ffa449;
+		display: inline-block;
+	}
+	ul {
+		margin-top: 30px;
+		list-style: none;
+		display: inline-block;
+		width: 450px;
+	}
+	li {
+		display: inline;
+		font-size: 20px;
+		margin-right: 10%;
+		color: #f0f0d8;
+		cursor:pointer;
+	}
+	li a {
+		text-decoration: none;
+		color: #f0f0d8;
+		width: 100px;
+		font-size: 20px;
+
+	} a:hover {
+		color: #f0f0d8;
+		text-decoration: none;
+	}
+}
+@media screen and (max-width: 480px) {
+    nav {
+        padding: 0%;
+        max-width: none;
+    }
+}
+.ion-edit {
+ 	color: #f0f0d8;
+ 	font-size: 50px;
+ 	padding: 5px;
+ 	display: inline-block;
+ 	cursor: pointer;
+ }
+
+#logo {
+	font-family: 'Kaushan Script', cursive;
+	font-size: 100px;
+	text-align: center;
+	color: #f0f0d8;
+	padding-top: 200px;
+	padding-bottom: 0;
+}
+
+#logocontainer {
+	height: 10vh;
+}
+
+#exercise-icon {
+	width: 100%;
+	height: 100px;
+	p {
+	color: #f0f0d8;
+ 	font-size: 24px;
+ }
+}
+
+.notice {
+	padding: 1em;
+	width: 200px;
+	border: 1px solid #f0f0d8;
+	background-color: #f0f0d8;
+	border-radius: 50px;
+	color: black;
+	float: right;
+	margin: 10px;
+}
+
+
+
+.docbody {
+	display: none;
+}
+
+.docbody_open {
+	display: block;
+}
+.exercise_explination{
+	background-color: rgba(240, 240, 216, .9);
+	display: inline-block;
+	padding: 1em;
+	font-size: 100%;
+}
+#piece {
+	 background-color: rgba(240, 240, 216, .9);
+	 display: inline-block;
+	 padding: 1em;
+}
+#imitation_typer{
+	width: 100%;
+	border: none;
+	font-size: 200%;
+	border-radius: 15px;
+	overflow: visible;
+	max-height: 100%;
+	height: 70vh;
+	padding: 15px;
+	background-color: rgba(255, 217, 152, .8);
+}
+#imitation_typer:focus{
+	outline-width: 0;
+	outline: none;
+}
+.matchingStatus {
+	text-weight: 400%;
+	background-color: #4fb0b8;
+	display: inline-block;
+}
+#prompts_doc {
+	width: 100%;
+	border: none;
+	font-size: 200%;
+	border-radius: 15px;
+	height: 70vh;
+	padding: 15px;
+	background-color: rgba(255, 217, 152, .8);
+	outline: none;
+}
+#wordCounter {
+	text-weight: 400%;
+	background-color: #ccc;
+	border: 1px solid #262626;
+	border-radius: 2px;
+	display: inline-block;
+	max-width: 150px;
+	padding: 5px;
+}
+#c {
+	margin-left: 5px;
+	background-color: #ccc;
+	outline-width: 0;
+	outline: none;
+	border: none;
+	display: inline-block;
+	width: 25%;
+}
+
+#d {
+	margin-left: 5px;
+	background-color: #ccc;
+	outline-width: 0;
+	outline: none;
+	border: none;
+	display: inline-block;
+	width: 25%;
+}
+
+#five_word {
+	width: 100%;
+	border: none;
+	font-size: 200%;
+	border-radius: 15px;
+	height: 70vh;
+	padding: 15px;
+	background-color: rgba(255, 217, 152, .8);
+	outline: none;
+}
+.one_of_five {
+	display: inline-block;
+	margin-right: 15px;
+	background-color: rgba(240, 240, 216, .9);
+}
+
+// log in css
+
+#log-in-container,
+#sign-up-container {
+/*	background-color: #ffa449;*/
+	// margin-top: 250px;
+	// margin-left: 200px;
+	width: 300px;
+	// display: block;
+	// float: left;
+}
+
+
+#login-form,
+#signup-form {
+	display: none;
+	background-color: #f0f0d8;
+	border-radius: 10px;
+	width: 175px;
+	margin-left: 10px;	
+	padding: 15px;
+	// margin-top: 75px;
+	color: #45453e;
+	text-align: center;
+	height: 250px;
+}
+
+#login-form input,
+#signup-form input {
+// 	border-radius: 50px;
+	padding: 10px;
+	border: none;
+	border-bottom: 1px solid black;
+	text-align: center;
+	outline: none;
+}
+
+#signup-btn,
+#login-btn {
+	color: #f0f0d8;
+	border: 1px solid #f0f0d8;
+	font-size: 24px;
+	border-radius: 180px;
+	padding: 10px 10px;
+	text-align: center;
+	height: 50px;
+	width: 144px;
+	margin-right: 10px;
+}
+#signup-btn:hover {
+	cursor: pointer;
+}
+#login-btn:hover {
+	cursor: pointer;
+}
+
+input#loginbtn {
+	margin-top: 57px;
+	width: 100px;
+}
+
+input#signupbtn {
+	width: 100px;
+}
+.form-container {
+	display: flex;
+	// align-items: center;
+	justify-content: center;
+}
+.login-box {
+}
+
+.sign-up-box {
+}
+
+#email,
+#password_digest,
+#user_username,
+#user_email, 
+#user_password {
+	width: 150px;
+	height: 20px;
+	background-color: #f0f0d8; 
+}
+
+.profile-container {
+	height: 100%;
+}
+
+#about-us {
+	width: 100vw;
+	margin-top: 300px;
+	background-color: #f2f2e8;	
+	text-align: center;
+	// position: static;
+	left: 0;
+}
+
+#about {
+	width: 60%;
+	height:100%;
+	margin: 30px auto;
+}
+
+.writers-example {
+	width: 100vw;
+	background-color: #f4f4ec;	
+	// height: 100%;
+	// position: static;
+	left: 0;
+	h1 {
+		text-align: center;
+	}
+}
+
+.writers-example-doc {
+	line-height: 30px;
+	height: 100%;
+	margin-bottom: 1em;
+}
+
+.push_me {
+	margin-top: 20%;
+}
+
+#clockdiv {
+	font-size: 30px;
+	color: #f0f0d8;
+	background-color: #262626;
+  max-width: 511px;
+	margin: 0 auto 30px auto;
+	border: 1px solid #e67e22;
+	border-radius: 200px;
+	padding: 10px 30px;
+	text-align: center;
+}
+
+.ion-document-text {
+	color: #f0f0d8;
+	font-size: 50px;
+}
+
+#exc-btn {
+	background-color: #583131;
+	border: 1px solid #583131;
+	margin-bottom: 30px;
+	margin-top: 30px;  
+	-ms-transform: rotate(7deg); /* IE 9 */
+    -webkit-transform: rotate(7deg); /* Chrome, Safari, Opera */
+    transform: rotate(7deg);
+}
+
+#footer {
+	background-color: #262626;
+	height: 30vh;
+	width: 100%;	
+	// position: relative;
+  // margin-top: -150px; /* negative value of footer height */
+  clear:both;
+  bottom: 0;
+  h1 {
+	font-family: 'Kaushan Script', cursive;
+	font-size: 50px;
+	color: #f0f0d8;
+	padding-bottom: 0;
+	margin-left: 100px;
+	position: absolute;
+  }
+}
+
+main {
+	height: 100%;
+}
+#close_account {
+	margin-left: 3%;
+}
+a {
+	color: #f0f0d8;
+}
+a:hover {
+	text-decoration: none;
+	color:#f0f0d8;
+}
+#tag {
+	margin: 30px auto 0 auto;
+}
+
+.modal-content {
+	background-color: #f0f0d8;
+}
+
+#girl_what {
+	color: black;
+}
+#submit {
+	width: 100px;
+	background-color: #ccc;
+  font-size: 18px;
+  border: 1px solid #262626;
+  border-radius: 1px;
+}
+
+
+

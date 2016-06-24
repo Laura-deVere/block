@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Block</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+  <link href='https://fonts.googleapis.com/css?family=Kaushan+Script&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+</head>
+<body>
+	<header>
+		<nav>
+			<% if current_user %>
+<!-- 				<span>Hey there, <%= link_to current_user.username, @user %></span> -->
+					<ul>
+						<li><%=link_to "Profile", user_path(@user) %></li>
+						<li><%=link_to "Log Out", sessions_path, method: :delete %></li>
+						<li type="button" name="B1" value="Exercise >>" onclick="randomlink()"><i class="ion-edit"></i>Start!</li>
+					</ul>
+			<% end %>	
+		</nav>
+	</header>
+	<main> 
+
+				<% if flash[:notice] %>
+					<div class="notice"><%=flash[:notice]%></div> 
+				<% end %>
+				<%= yield %>
+				<div id="footer">
+			<h1>Block..</h1>
+		</div>
+		</main>
+	</body>
+</html>

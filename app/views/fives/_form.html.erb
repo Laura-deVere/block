@@ -1,0 +1,10 @@
+<%= form_for @document, url: five_path do |f| %>
+	<%= f.hidden_field :words, id: :five_word_form, value: params[:words] || @collected_words %>
+	<p>
+		<%= f.text_area :body, id: :five_word, onkeyup: ("count(this)"), :value => params[:body], onclick: ("setTenMins('clockdiv')")%>
+	</p>
+	<p>
+		<%= f.submit "Save", id: :submit %>
+	</p>
+	<p id='wordCounter'>Word Count:<input type="text" id="d" onkeyup="count(document.five_word_form.five_word,this)"></p>
+<% end %>
